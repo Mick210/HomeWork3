@@ -15,7 +15,7 @@ public class Main {
         double dou = 2.123456789;
         System.out.println("Значение переменной do c типом double равно " + dou);
 
-        System.out.println("Задача 2, типы переменных: float, long, short, byte");
+        System.out.println("Задача 2, типы переменных: float 27.12 long 987678965549 float 2.786 short 569 short -159 short 27897 byte 67");
         float flTwo = 27.12f;
         long loTwo = 987678965549L;
         float flThree = 2.786f;
@@ -27,15 +27,15 @@ public class Main {
         byte LP = 23;
         byte AS = 27;
         byte EA = 30;
-        int allStudents = LP + AS + EA;
+        byte allStudents = (byte) (LP + AS + EA);
         short totalSheets = 480;
-        int studentSheet = totalSheets / allStudents;
+        byte studentSheet = (byte) (totalSheets / allStudents);
         System.out.println("На каждого ученика рассчитано " + studentSheet + " листов бумаги");
 
         byte efficiency2Minutes = 16;
-        int efficiency1Minutes = efficiency2Minutes / 2;
-        int efficiency20Minutes = efficiency1Minutes * 20;
-        int efficiency24Hours = efficiency1Minutes * 60 * 24;
+        byte efficiency1Minutes = (byte) (efficiency2Minutes / 2);
+        short efficiency20Minutes = (short) (efficiency1Minutes * 20);
+        short efficiency24Hours = (short) (efficiency1Minutes * 60 * 24);
         int efficiency72Hours = efficiency24Hours * 3;
         int efficiency1Month = efficiency24Hours * 30;
         System.out.println("За 20 минут машина произвела " + efficiency20Minutes + " штук бутылок");
@@ -46,21 +46,44 @@ public class Main {
         byte totalPaint = 120;
         byte classWhite = 2;
         byte classGrown = 4;
-        int classWhiteGrown = classWhite + classGrown;
-        int totalClass = totalPaint / classWhiteGrown;
-        int totalWhite = classWhite * totalClass;
-        int totalGrown = classGrown * totalClass;
+        byte classWhiteGrown = (byte) (classWhite + classGrown);
+        byte totalClass = (byte) (totalPaint / classWhiteGrown);
+        byte totalWhite = (byte) (classWhite * totalClass);
+        byte totalGrown = (byte) (classGrown * totalClass);
         System.out.println("В школе, где " + totalClass + " классов, нужно " + totalWhite + " банок белой краски и " + totalGrown + " банок коричневой краски");
 
-        int bananas = 5 * 80;
-        int milk = 2 * 105;
-        int iceCream = 2 * 100;
-        int egg = 4 * 70;
-        int weightGrams = bananas + milk + iceCream + egg;
+        short bananas = (short) (5 * 80);
+        short milk = (short) (2 * 105);
+        short iceCream = (short) (2 * 100);
+        short egg = (short) (4 * 70);
+        short weightGrams = (short) (bananas + milk + iceCream + egg);
         float weightKg = (float) weightGrams / 1000;
         System.out.println("Вес завтрака " + weightGrams + " грамм");
         System.out.println("Вес завтрака " + weightKg + " килограмм");
 
+        byte loseWeightOn = 7;
+        short loseWeightOn250 = 250;
+        short loseWeightOn500 = 500;
+        byte itTakesDays250 = (byte) (loseWeightOn * 1000 / loseWeightOn250);
+        System.out.println("Если сбрасывать по " + loseWeightOn250 + " грамм в день, спортсмену потребуется " + itTakesDays250 + " дней");
+        byte itTakesDays500 = (byte) (loseWeightOn * 1000 / loseWeightOn500);
+        System.out.println("Если сбрасывать по " + loseWeightOn500 + " грамм в день, спортсмену потребуется " + itTakesDays500 + " дней");
+
+        int masha = 67760;
+        int denis = 83690;
+        int kristina = 76230;
+        int masha10 = (int) (masha * 1.1);
+        int mashaAnnual = masha10 * 12;
+        int salaryDifferenceMasha = mashaAnnual - masha * 12;
+        System.out.println("Теперь Маша будет получать " + masha10 + " рублей. Годовой доход вырос на " + salaryDifferenceMasha + " рублей");
+        int denis10 = (int) (denis * 1.1);
+        int denisAnnual = (int) (denis10 * 12);
+        int salaryDifferenceDenis = denisAnnual - denis * 12;
+        System.out.println("Теперь Денис будет получать " + denis10 + " рублей. Годовой доход вырос на " + salaryDifferenceDenis + " рубля");
+        int kristina10 = (int) (kristina * 1.1);
+        int kristinaAnnual = (int) (kristina10 * 12);
+        int salaryDifferenceKristina = kristinaAnnual - kristina * 12;
+        System.out.println("Теперь Кристина будет получать " + kristina10 + " рубля. Годовой доход вырос на " + salaryDifferenceKristina + " рубля");
 
     }
 }
